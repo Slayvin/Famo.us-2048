@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Famo.us 2048</title>
+
+        <!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<!--        <link href='fonts/roboto.css' rel='stylesheet' type='text/css'>      -->
+
+        <!-- Famo.us CSS -->
+        <link rel="stylesheet" type="text/css" href="css/famous.css" />        
+
+        <!-- Main css-->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <!-- Themes -->
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="css/themes/classic/main.css" />
+		
+		<!-- requestAnimationFrame fallback for older browsers -->
+        <script type="text/javascript" src="js/lib/requestAnimationFrame.js"></script>
+        
+        <script type="text/javascript">
+            function swapStyleSheet(sheet){
+//                document.getElementById('pagestyle').setAttribute('href', ('css/themes/'+sheet+'/main.css'));
+                document.getElementById('pagestyle').href = ('css/themes/'+sheet+'/main.css');
+            }
+        </script>
+    </head>
+    <body>
+        <header id="top">
+            <h1>2048</h1>
+            <p>The Famo.us game</p>
+        </header>
+		
+        <div id="main">
+            <div id="gameBackground"></div>
+        </div>
+		
+        <footer>
+            <h2>How to play</h2>
+            <p>Use the arrow keys to move the tiles. You know how it works...</p>
+            
+            <h2>Change Theme</h2>
+            <button onclick="swapStyleSheet('classic')">Classic (default)</button>
+            <button onclick="swapStyleSheet('symbols_classic')">Symbols</button>
+            <button onclick="swapStyleSheet('default')">Dark</button>
+        </footer>
+		
+        <div id="winMessage" class="hidden">
+        	<h2>Congratulations!</h2>
+        	<p class="button" id="winButton">Click to restart</p>
+        	<p class="button" id="continueButton">Continue</p>
+        </div>
+        <div id="loseMessage" class="hidden">
+        	<h2>Game Over!</h2>
+        	<p>Click to restart</p>
+        </div>
+        
+        <!-- module loader (must come before loading Famo.us lib -->
+        <script type="text/javascript" src="js/lib/require.js"></script>
+		
+		<!-- Famo.us library -->
+		<script type="text/javascript" src="js/lib/famous.min.js"></script>
+		
+        <script type="text/javascript">
+            require.config({baseUrl: 'js/'});
+           	require(['main']);
+        </script>
+		
+    </body>
+</html>

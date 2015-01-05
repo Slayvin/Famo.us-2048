@@ -1,0 +1,62 @@
+body{
+    background: #7c7c7c;
+    font-family: 'Roboto', sans-serif;
+    color: #776e65;
+}
+.score{
+    background: #bbada0;
+    color: #f9f6f2;
+}
+.score:before{
+    color:#eee4da;
+}
+#main{
+    background: #525252;
+}
+#gameBackground>div{
+    background: #646464;
+}
+.fade{
+	background-color: #eee4da;
+}
+.block{
+    color: #f9f6f2;
+}
+._2{
+    background: #ffe2d2;
+    color: #776e65;
+}
+._4{
+    background: #ffe2c6;
+    color: #776e65;
+}
+._8{
+    background: #ffaa8d;
+}
+._16{
+    background: #ff8d71;
+}
+._32{
+    background: #ff7155;
+}
+._64{
+    background: #ff5538;
+}
+._128{
+    background: #ff6a2a;
+}
+._256{
+    background: #ff7f2a;
+}
+._512{
+    background: #ff942a;
+} 
+._1024{
+    background: #ffaa2a;
+}
+._2048{
+    background: #ffbf2a;
+}
+._4096{
+    background: #4d4a42;
+}
